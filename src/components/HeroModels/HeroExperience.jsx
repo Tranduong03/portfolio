@@ -5,7 +5,7 @@ import { Room } from './Room.jsx';
 import HeroLights from './HeroLights.jsx';
 
 const HeroExperience = () => {
-  const isTablet = useMediaQuery({ query: '(max-width: 1028px)' });
+  const isTablet = useMediaQuery({ query: '(max-width: 1024px)' });
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
   
   return (
@@ -22,8 +22,8 @@ const HeroExperience = () => {
       <HeroLights />
       <group>
         scale={isMobile ? 0.7 : 1}
-        position={[0, -3.5, 0]}
-        rotation={[0, -Math.PI / 4, 0]}
+        position={[0, -3.5, 2]}
+        rotation={[0, -Math.PI/4, 0]}
       </group>
       <Room />
     </Canvas>

@@ -4,15 +4,14 @@ import HeroExperience from '../components/HeroModels/HeroExperience.jsx';
 
 const Hero = () => {
   return (
-    <section id="hero" className='relative overflow-hidden'>
+    <section id="hero" className="relative overflow-hidden">
       <div className='absolute top-0 left-0 z-10'>
         <img src="/images/bg.png" alt="background" />
       </div>
 
       <div className='hero-layout'>
         {/*LEFT: HERO CONTENT*/}
-        <header className='flex flex-col justify-center md:w-full w-screen
-        md:px-20 px-5'>
+        <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
           <div className="flex flex-col gap-7">
             <div className='hero-text'>
               <h1>
@@ -39,21 +38,21 @@ const Hero = () => {
               Hi, I'm Phi Duong, a developer based in Vietnam with a passion for code.
             </p>
             <Button
+              text="See My Work"
               className="md:w-80 md:h-16 w-60 h-12"
-              id="button"
-              text="See my Work"
+              id="counter"
             />
           </div>
         </header>
 
         {/*RIGHT: 3D MODEL*/}
         <figure>
-          <div className='hero-3d-layout'>
+          <div className="hero-3d-layout border-red-200 border-2">
             <HeroExperience/>
           </div>
-          
         </figure>
       </div>
+
     </section>
   )
 }
