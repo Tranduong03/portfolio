@@ -1,5 +1,6 @@
 import {words} from '../constants/index.js'
-import {Button} from '../components/Button';
+import Button from '../components/button';
+import HeroExperience from '../components/HeroModels/HeroExperience.jsx';
 
 const Hero = () => {
   return (
@@ -10,7 +11,7 @@ const Hero = () => {
 
       <div className='hero-layout'>
         {/*LEFT: HERO CONTENT*/}
-        <header className='flex flex-col justify-content md:w-full w-screen
+        <header className='flex flex-col justify-center md:w-full w-screen
         md:px-20 px-5'>
           <div className="flex flex-col gap-7">
             <div className='hero-text'>
@@ -19,12 +20,11 @@ const Hero = () => {
                 <span className="slide"> 
                   <span className="wrapper">
                     {words.map((word) => (
-                      <span key={word.text} className="flex items-center md:gap-3 gap-1 pd-2">
+                      <span key={word.text} className="flex items-center md:gap-3 gap-1 p-2">
                         <img 
                           src={word.imgPath} 
                           alt={word.text} 
-                          className='xl:size-12 md:size-10 size-7 md:p-2 p-1
-                          rounded-full bg-white-50'
+                          className='xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50'
                         />
                         <span>{word.text}</span>
                       </span>
@@ -46,8 +46,13 @@ const Hero = () => {
           </div>
         </header>
 
-
         {/*RIGHT: 3D MODEL*/}
+        <figure>
+          <div className='hero-3d-layout'>
+            <HeroExperience/>
+          </div>
+          
+        </figure>
       </div>
     </section>
   )
